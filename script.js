@@ -22,5 +22,5 @@ document.getElementById('copyHex').addEventListener('click', function() {
 document.getElementById('copyRgb').addEventListener('click', function() {
     const rgbText = document.getElementById('rgbValue').textContent;
     navigator.clipboard.writeText(rgbText);
-    alert("RGB-Code " + rgbText + " In zwischenablage kopiert");
+    alert("RGB-Code " + rgbText + " In Zwischenablage kopiert");
 });
