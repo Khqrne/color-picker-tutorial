@@ -24,3 +24,14 @@ document.getElementById('copyRgb').addEventListener('click', function() {
     navigator.clipboard.writeText(rgbText);
     alert("RGB-Code " + rgbText + " In Zwischenablage kopiert");
 });
+
+document.getElementById('randomColorBtn').addEventListener('click', function() {
+    // Generiert einen zufälligen 6-stelligen Hex-Code
+    const randomHex = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+    
+    const colorInput = document.getElementById('colorInput');
+    colorInput.value = randomHex; 
+    
+    // Löst das 'input' Event aus, um Texte und Hintergrund zu aktualisieren
+    colorInput.dispatchEvent(new Event('input')); 
+});
